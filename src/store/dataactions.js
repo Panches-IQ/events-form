@@ -12,8 +12,18 @@ export const setCoordinator = (data) => ({
     payload: data
 });
 
+export const setCategory = (data) => ({
+    type: EVENT_ACTION.CATEGORY,
+    payload: data
+});
+
 export const setTitle = (data) => ({
     type: EVENT_ACTION.TITLE,
+    payload: data
+});
+
+export const setDuration = (data) => ({
+    type: EVENT_ACTION.DURATION,
     payload: data
 });
 
@@ -27,8 +37,13 @@ export const setPaid = (data) => ({
     payload: data
 });
 
-export const setPayment = (data) => ({
-    type: EVENT_ACTION.PAYMENT,
+export const setFee = (data) => ({
+    type: EVENT_ACTION.FEE,
+    payload: data
+});
+
+export const setReward = (data) => ({
+    type: EVENT_ACTION.REWARD,
     payload: data
 });
 
@@ -41,6 +56,11 @@ export const setEmail = (data) => ({
 
 export const setErrorDate = (data) => ({
     type: ERROR_ACTION.DATE,
+    payload: data
+});
+
+export const setErrorTime = (data) => ({
+    type: ERROR_ACTION.TIME,
     payload: data
 });
 
@@ -61,6 +81,11 @@ export const setErrorDescription = (data) => ({
 
 export const setErrorPaid = (data) => ({
     type: ERROR_ACTION.PAID,
+    payload: data
+});
+
+export const setErrorFee = (data) => ({
+    type: ERROR_ACTION.FEE,
     payload: data
 });
 

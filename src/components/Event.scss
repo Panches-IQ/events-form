@@ -1,0 +1,59 @@
+$headerbgcolor: rgb(60, 88, 138);;
+$headercolor: #FFFFFF;
+$mainbgcolor: #d6d7dd;
+
+.card-content-wrapper {
+    background-color: $headerbgcolor;
+    margin: 3rem;
+    font-family: sans-serif;
+
+    .modal-title {
+        color: $headercolor;
+        padding-left: 7.5rem;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 4rem;
+        height: 4rem;
+        border-top: 9px solid rgb(34, 59, 99);
+    }
+
+    .modal-body {
+        background-color: $mainbgcolor;
+        padding: 1rem 6rem;
+    }
+
+    .modal-footer {
+        background-color: $mainbgcolor;
+        width: 100%;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+
+        .submit-event-button {
+            width: 132px;
+            height: 50px;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 600;
+            display: block;
+            background-color: #ff7300;
+            border-radius: 5px;
+            margin: auto;
+            line-height: 50px;
+            user-select: none;
+            transition: background-color 100ms ease;
+
+            &.disabled {
+                cursor: default;
+                border: none;
+                outline: none;
+                background-color: gray;
+            }
+
+            &:active:not(.disabled) {
+                background-color: #dd6706;
+            }
+        }
+    }
+}

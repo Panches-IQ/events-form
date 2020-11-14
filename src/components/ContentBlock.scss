@@ -1,0 +1,215 @@
+$headercolor: #444499;
+$fontcolor: rgb(70, 98, 148);
+$hintcolor: #b8b8b8;
+$errorbgcolor: #d38a8a;
+$errorcolor: #D37a7a;
+$placeholdercolor: #a8a8a8;
+$inputbrcolor: #88a0b3;
+$textcolor: #383838;
+
+.content-wrapper {
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    background-color: white;
+    color: $headercolor;
+    border-radius: 3px;
+    box-shadow: 1px 1px 4px 1px gray;
+    margin: 1rem 0 0.5rem 0;
+
+    &.success-event {
+        background-color: #caf3e2;
+        padding-bottom: 1.5rem;
+
+        .block-name.success {
+            color: #3bad5d;
+
+            &.small {
+                font-size: 14px;
+                color: $textcolor;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .block-name {
+        font-size: 22px;
+        font-weight: 600;
+        color: $fontcolor;
+    }
+
+    .block-separator {
+        width: 100%;
+        height: 1px;
+        background-color: lightgray;
+        margin: 10px 0;
+    }
+
+    .block-area {
+        padding: 10px 0;
+
+        &.less-space-margin {
+            margin-top: -10px;
+        }
+
+        &.error {
+            color: red;
+
+            .area-error {
+                display: inline-block;
+            }
+
+            .area-name,
+            .area-content .hint {
+                color: $errorcolor;
+            }
+        }
+
+        .area-name {
+            width: 8rem;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: left;
+            color: $fontcolor;
+        }
+
+        .area-content {
+            width: calc(100% - 16rem);
+            
+            .hint {
+                color: $hintcolor;
+                font-size: 12px;
+                font-weight: 600;
+
+                span {
+                    float: right;
+                }
+            }
+
+            input[type="text"],
+            textarea {
+                width: calc(100% - 10px);
+                color: $textcolor;
+            }
+
+            .linerow-wrapper {
+                color: $textcolor;
+                width: 100%;
+                height: 24px;
+                font-size: 14px;
+                margin-top: -2px;
+                margin-bottom: 4px;
+
+                input[type="radio"] {
+                    height: 24px;
+                    color: red;
+                    margin: 0;
+                    width: 14px;
+                    cursor: pointer;
+                    background: #efefef;
+                }
+
+                .radio-label {
+                    line-height: 26px;
+                    padding-left: 4px;
+                    padding-right: 16px;
+                }
+
+                .fee-input {
+                    width: 70px;
+                }
+
+                .reward-input,
+                .duration-input {
+                    width: 70px;
+                }
+
+                .date-input {
+                    width: 140px;
+                }
+
+                .time-input {
+                    width: 72px;
+                }
+
+                .date-input,
+                .time-input {
+                    margin-right: 10px;
+                    color: $placeholdercolor;
+
+                    &.selected {
+                        color: $textcolor;
+                    }
+                }
+            }
+
+            select {
+                width: 100%;
+                height: 24px;
+                margin-bottom: 6px;
+                color: $placeholdercolor;
+
+                &.selected {
+                    color: $textcolor;
+                }
+            }
+
+            input:not([type="radio"]),
+            textarea,
+            select {
+                min-height: 20px;
+                padding-left: 6px;
+                outline: none !important;
+                border: 1px solid $inputbrcolor;
+                border-radius: 2px;
+
+                &::placeholder {
+                    color: $placeholdercolor;
+                    font-family: sans-serif;
+                }
+
+                &:focus {
+                    box-shadow: 0 0 2px 0 $inputbrcolor;
+                }
+            }
+        }
+
+        .area-error {
+            width: 6rem;
+            background-color: $errorbgcolor;
+            border-radius: 2px;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 14px;
+            padding: 4px 6px;
+            float: right;
+            display: none;
+            color: white;
+            margin-top: 2px;
+
+            &:before {
+                content: '';
+                width: 0px;
+                height: 0px;
+                border-top: 4px solid transparent;
+                border-right: 4px solid $errorbgcolor;
+                border-bottom: 4px solid transparent;
+                position: absolute;
+                margin-left: -10px;
+                margin-top: 3px;
+            }
+        }
+
+        .description-content {
+            resize: none;
+        }
+    }
+}
+
+.display-inline {
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+}
+
+.display-none {
+    display: none;
+}

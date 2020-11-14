@@ -12,9 +12,21 @@ const dataReducer = (state, action) => {
             return { ...state, date: action.payload };
         case EVENT_ACTION.DESCRIPTION:
             return { ...state, description: action.payload };
+        case EVENT_ACTION.FEE:
+            return { ...state, fee: action.payload };
+        case EVENT_ACTION.REWARD:
+            return { ...state, reward: action.payload };
+        case EVENT_ACTION.DURATION:
+            return { ...state, duration: action.payload };
+        case EVENT_ACTION.PAID:
+            return { ...state, ispaid: action.payload };
+        case EVENT_ACTION.EMAIL:
+            return { ...state, email: action.payload };
+        case EVENT_ACTION.CATEGORY:
+            return { ...state, category: action.payload };
         default:
             return state;
     }
 }
 
-export default createStore(dataReducer, initialdata);
+export const eventstore = createStore(dataReducer, initialdata);
